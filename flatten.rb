@@ -3,7 +3,7 @@
 #
 class Array
   def deep_push(x)
-    unless x.class == Array 
+    unless x.kind_of?(Array)
       self << x
     else 
       x.each {|e| deep_push(e)} 
